@@ -1,0 +1,39 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Login
+        link(rel="stylesheet", href="home.css")
+    body 
+        header 
+            if session
+                a(href="/logout").aaa Logout
+            else
+                a(href="/login").aaa Login 
+                a(href="/registre").aaa Register
+        form(action="/add_question", method="POST")
+            label Add Question:
+            textarea(name="question", rows="4", cols="50", required=true)
+            if session
+                .submit
+                    input(type="submit", value="envoyer")
+            else
+                p.aa |if you want put your question or answer a question you should be
+                    a(href="/login")  log in.
+        if questions && questions.length > 0
+            .content
+                each q in questions
+                    .con
+                        p=q.date
+                        p User Id :!{q.user_id}
+                        .ques
+                            p= q.question
+                        if session
+                            -let link=`/${q._id}`
+                            a(href=link) reponse
+        else
+            p No questions available
+                        
+
+

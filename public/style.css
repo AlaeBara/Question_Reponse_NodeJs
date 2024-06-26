@@ -1,0 +1,55 @@
+input{
+    display: block;
+}
+label{
+    display: block;
+}
+form{
+    border:1px solid black;
+    padding: 30px;
+    width: fit-content;
+    margin: auto;
+    margin-top: 100px;
+}
+h1{
+    text-align: center;
+}
+
+.registre{
+    padding: 30px;
+    text-align: center;
+}
+a{
+    border: 1px solid black;
+    text-decoration: none;
+    padding: 10px 10px;
+    background-color:  rgb(170, 165, 165);
+    color: black;
+    font-weight: 800;
+}
+
+.submit{
+    width: fit-content;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.submit input{
+    background-color:  rgb(170, 165, 165);
+    outline: none;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 20px;
+}
+.message p{
+    color: red;
+    text-align: center;
+}
+
+label{
+    font-size: 20px;
+}
+.inp{
+    width: 200px;
+    margin-bottom: 10px;
+}

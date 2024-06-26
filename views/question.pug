@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Login
+        link(rel="stylesheet", href="home.css")
+    body 
+        header 
+            a(href="/").aaa back to home
+        
+        form(action=`/add_reponse/${message._id}`, method="POST")
+            label Question:
+            p.content_question= message.question
+            label add reponse:
+            textarea(name="reponse", rows="4", cols="50", required=true)
+            .submit
+                input(type="submit", value="envoyer")
+        if reponses && reponses.length > 0
+            .content
+                each s in reponses
+                    .con
+                        p=s.date
+                        p User Id :!{s.user_id}
+                        .ques
+                            p= s.response
+        else
+            p.pp No reponse available
+                        
+
+
